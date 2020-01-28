@@ -8,7 +8,7 @@ const client = new Client({
     port: 5433,
 });
 client.connect();
-client.query('SELECT NOW()', (err, res) => {
+client.query('SELECT * from posts', (err, res) => {
     console.log(err, res);
     client.end()
 });
