@@ -9,6 +9,6 @@ const client = new Client({
 });
 client.connect();
 client.query('SELECT * from posts', (err, res) => {
-    console.log(err, res);
+    console.log(res.rows);
     client.end()
 });
