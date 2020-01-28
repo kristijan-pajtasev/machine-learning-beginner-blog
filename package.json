@@ -17,8 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start:prod": "pm2 start server.js --name citywise-portal",
-    "stop:prod": "pm2 stop citywise-portal && pm2 delete citywise-portal"
+    "start:prod": "pm2 start server.js --name ml-portal",
+    "stop:prod": "pm2 stop ml-portal && pm2 delete ml-portal"
   },
   "eslintConfig": {
     "extends": "react-app"
