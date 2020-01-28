@@ -1,4 +1,4 @@
-const {Client} = require('pg')
+const {Client} = require('pg');
 const {db} = require('../config');
 
 module.exports = {
