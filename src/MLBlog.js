@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
+import './MLBlog.css';
 
-function App() {
+function MLBlog() {
   return (
     <div className="App">
       Under construction
@@ -9,4 +9,4 @@ function App() {
   );
 }
 
-export default App;
+export default MLBlog;
