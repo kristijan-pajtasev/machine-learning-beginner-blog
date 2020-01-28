@@ -1,14 +1,14 @@
-const { Client } = require('pg')
+const {Client} = require('pg')
+const {db} = require('../config');
 
-const client = new Client({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'mlblog',
-    password: 'root',
-    port: 5433,
-});
-client.connect();
-client.query('SELECT * from posts', (err, res) => {
-    console.log(res.rows);
-    client.end()
-});
+module.exports = {
+    getPosts: (success, fail) => {
+        const client = new Client(db);
+        client.connect();
+        client.query('SELECT * from posts', (err, res) => {
+            console.log(res.rows);
+            success(res.rows);
+            client.end()
+        });
+    }
+};
