@@ -3,7 +3,9 @@ import './UnderConstruction.css';
 
 const UnderConstruction = () => {
     return (
-        <div className="UnderConstruction" />
+        <div className="UnderConstruction" >
+            Under construction
+        </div>
     );
 };
 

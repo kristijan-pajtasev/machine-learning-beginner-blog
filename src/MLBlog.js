@@ -1,13 +1,13 @@
 import React from 'react';
 import './MLBlog.css';
 import Header from "./Header";
-import Articles from "./Articles";
+import UnderConstruction from "./UnderConstruction";
 
 function MLBlog() {
   return (
     <div className="App">
         <Header/>
-        <Articles />
+        <UnderConstruction />
     </div>
   );
 }
