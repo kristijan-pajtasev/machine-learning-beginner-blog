@@ -5,8 +5,7 @@ module.exports = {
     getPosts: (success, fail) => {
         const client = new Client(db);
         client.connect();
-        client.query('SELECT * from posts', (err, res) => {
-            console.log(res.rows);
+        client.query('SELECT id, post, description, created, title from posts', (err, res) => {
             success(res.rows);
             client.end()
         });
