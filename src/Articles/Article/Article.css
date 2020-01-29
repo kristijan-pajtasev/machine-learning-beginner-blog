@@ -18,3 +18,11 @@
     font-size: 0.8em;
     text-align: right;
 }
+
+.Article__imageContainer {
+    text-align: center;
+}
+
+.Article__imageContainer img {
+    max-width: 100%;
+}
