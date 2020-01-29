@@ -5,7 +5,7 @@ const port = 8003;
 app.use(express.static('build'));
 
 app.get('/posts', (req, res) => {
-    res.json({})
+    res.json([])
 });
 
 app.listen(port, () => {
