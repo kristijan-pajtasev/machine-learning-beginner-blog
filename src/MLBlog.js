@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './MLBlog.css';
 import Header from "./Header";
-import UnderConstruction from "./UnderConstruction";
+import Loading from "./Loading";
 import Articles from "./Articles";
 
 function MLBlog() {
@@ -17,7 +17,7 @@ function MLBlog() {
   return (
     <div className="App">
         <Header/>
-        {articles && articles.length ? <Articles articles={articles} /> : <UnderConstruction />}
+        {articles ? <Articles articles={articles} /> : <Loading />}
     </div>
   );
 }

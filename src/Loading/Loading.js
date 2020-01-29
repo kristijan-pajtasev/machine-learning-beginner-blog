@@ -4,7 +4,7 @@ import './Loading.css';
 const Loading = () => {
     return (
         <div className="Loading" >
-            Under construction
+            <img alt="spinner" src="/images/gear-animation.gif" />
         </div>
     );
 };
