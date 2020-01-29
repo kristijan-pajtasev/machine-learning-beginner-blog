@@ -12,7 +12,8 @@ function MLBlog() {
             setArticles(data);
         }));
 
-    }, [])
+    }, []);
+
   return (
     <div className="App">
         <Header/>
