@@ -1,8 +1,13 @@
 import React, {useState, useEffect} from 'react';
-import './MLBlog.css';
+import {
+    HashRouter as Router,
+    Switch,
+    Route
+} from "react-router-dom";
 import Header from "./Header";
 import Loading from "./Loading";
 import Articles from "./Articles";
+import './MLBlog.css';
 
 function MLBlog() {
     const [articles,setArticles] = useState(null);
@@ -17,7 +22,12 @@ function MLBlog() {
   return (
     <div className="App">
         <Header/>
-        {articles ? <Articles articles={articles} /> : <Loading />}
+        <Router basename="/">
+            <Switch>
+                <Route path="/posts" component={() => articles ? <Articles articles={articles} /> : <Loading />} />
+                <Route path="/" component={() => articles ? <Articles articles={articles} /> : <Loading />} />
+            </Switch>
+        </Router>
     </div>
   );
 }
