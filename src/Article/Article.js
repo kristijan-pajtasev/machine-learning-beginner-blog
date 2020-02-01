@@ -10,24 +10,26 @@ const Article = ({id}) => {
         fetch(`/posts/${id}`).then(res => res.json().then(
             setArticle
         ))
-    }, [])
+    }, []);
 
-    if (id) return <Loading/>
+    if (!article) return <Loading/>;
 
-    // return (
-    //     <div className='Article'>
-    //         <h3 className='Article__title'>{title}</h3>
-    //
-    //         <div className='Article__post' dangerouslySetInnerHTML={{__html:post}}>
-    //         </div>
-    //
-    //         <div className='Article__created' >
-    //             {getCreatedDate(created)}
-    //
-    //         </div>
-    //
-    //     </div>
-    // )
+    const {title, created, post} = article
+
+    return (
+        <div className='Article'>
+            <h3 className='Article__title'>{title}</h3>
+
+            <div className='Article__post' dangerouslySetInnerHTML={{__html:post}}>
+            </div>
+
+            <div className='Article__created' >
+                {getCreatedDate(created)}
+
+            </div>
+
+        </div>
+    )
 };
 
 export default Article;
