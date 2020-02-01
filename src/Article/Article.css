@@ -1,0 +1,28 @@
+.Article {
+    /*background: #333;*/
+    background: #efefef;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 30px 0;
+    padding: 15px;
+    width: 100%;
+}
+.Article__title {
+    /*color: #5e91f2;*/
+    color: #1564bf;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.Article__created {
+    font-size: 0.8em;
+    text-align: right;
+}
+
+.Article__imageContainer {
+    text-align: center;
+}
+
+.Article__imageContainer img {
+    max-width: 100%;
+}
