@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './Article.css';
 import Loading from "../Loading";
 
-const Article =({id}) => {
-    const getCreatedDate = (date) => date.substr(0,10);
+const Article = ({id}) => {
+    const getCreatedDate = (date) => date.substr(0, 10);
+    const [article, setArticle] = useState(null);
 
-    if(id) return <Loading />
+    useEffect(() => {
+        fetch(`/posts/${id}`).then(res => res.json().then(
+            setArticle
+        ))
+    }, [])
+
+    if (id) return <Loading/>
 
     // return (
     //     <div className='Article'>
