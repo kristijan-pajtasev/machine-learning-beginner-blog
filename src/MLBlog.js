@@ -26,7 +26,7 @@ function MLBlog() {
         <Router basename="/">
             <Switch>
                 <Route exact path="/posts" component={() => articles ? <Articles articles={articles} /> : <Loading />} />
-                <Route path="/:id" component={props => <Article id={props.match.params.id} />} />
+                <Route path="/posts/:id" component={props => <Article id={props.match.params.id} />} />
                 <Route exact path="/" component={() => articles ? <Articles articles={articles} /> : <Loading />} />
             </Switch>
         </Router>

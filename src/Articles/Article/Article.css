@@ -7,11 +7,25 @@
     padding: 15px;
     width: 100%;
 }
+
 .Article__title {
     /*color: #5e91f2;*/
     color: #1564bf;
     font-size: 1.3em;
     text-align: center;
+}
+
+.Articles .Article__title {
+    text-align: left;
+}
+
+.Article__title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.Article__title a:hover {
+    text-decoration: underline;
 }
 
 .Article__created {
